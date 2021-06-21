@@ -58,6 +58,7 @@ const response = {
             });
 
             logging.warn(`Request to ${webhook.get('target_url') || null} failed because of: ${err.code || ''}.`);
+            logging.warn(err.response.body);
         };
     }
 };
